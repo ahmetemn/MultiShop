@@ -1,15 +1,11 @@
 
 using MultiShop.Catalog.Dtos;
+using MultiShop.Catalog.Entities;
+using MultiShop.Catalog.Services.BaseMongoService;
 
-public interface ICategoryServices
+public interface ICategoryServices:
+    IGenericMongoService<Category, CreateCategoryDto, UpdateCategoryDto, ResultCategoryDto, GetByIdCategoryDto>
 {
-    Task<List<ResultCategoryDto>> GetAllCategoriesAsync();
+    Task<List<ResultCategoryDto>> GetCategoriesByNameAsync(string name);
 
-    Task CreateCategoryAsync(CreateCategoryDto createCategoryDto);
-
-    Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto);
-
-    Task DeleteCategoryAsync(string id);
-
-    Task<GetByIdCategoryDto> GetCategoryByIdAsync(string id);
 }

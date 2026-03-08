@@ -1,19 +1,18 @@
 namespace MultiShop.Catalog.Entities;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MultiShop.Catalog.Entities.Abstract;
 
-public class ProductImage
+public class ProductImage:Base
 {
 
-    public ProductImage(string productImageId ,  string productId)
+    public ProductImage(  string productId)
     {
-        ProductImageId = productImageId;
+
         ProductId = productId;
     }
     
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string ProductImageId { get; set; }
+
 
     public string? Image1 { get; set; }
     public string? Image2 { get; set; }
