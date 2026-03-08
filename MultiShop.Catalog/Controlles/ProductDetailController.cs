@@ -45,9 +45,8 @@ namespace MultiShop.Catalog.Controlles
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductDetail(string id, UpdateProductDetailDto dto)
+        public async Task<IActionResult> UpdateProductDetail( UpdateProductDetailDto dto)
         {
-            dto.ProductDetailId = id;
             await _productDetailServices.UpdateAsync(dto);
             return Ok(ApiResponse.Success("Product detail updated successfully.", 200));
         }

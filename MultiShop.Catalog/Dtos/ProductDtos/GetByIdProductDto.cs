@@ -1,8 +1,11 @@
+using MultiShop.Catalog.Entities.Abstract;
+
 namespace MultiShop.Catalog.Dtos.ProductDtos;
 
 public class GetByIdProductDto
 {
-    public  string ProductId   { get; set; }
+
+    public string Id { get; set; }
     public string ProductName { get; set; }
     public decimal Price { get; set; }
     public string  ProductImageUrl { get; set; }

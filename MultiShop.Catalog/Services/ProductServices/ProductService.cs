@@ -9,7 +9,7 @@ namespace MultiShop.Catalog.Services.ProductServices
 {
     public class ProductService : GenericMongoService<Product, CreateProductDto, UpdateProductDto, ResultProductDto, GetByIdProductDto>, IProductService
     {
-        public ProductService(IMapper mapper, IDatabaseSettings databaseSettings, string collectionName) : base(mapper, databaseSettings, databaseSettings.ProductCollectionName)
+        public ProductService(IMapper mapper, IDatabaseSettings databaseSettings) : base(mapper, databaseSettings, databaseSettings.ProductCollectionName)
         {
         }
     }
