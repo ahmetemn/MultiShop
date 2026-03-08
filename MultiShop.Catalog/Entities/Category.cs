@@ -1,12 +1,12 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MultiShop.Catalog.Entities.Abstract;
 
 namespace MultiShop.Catalog.Entities;
-public class Category : IEntity
+public class Category : Base
 {
-    public Category(string id , string categoryName)
+    public Category( string categoryName)
     {
-        Id = id;
         CategoryName = categoryName;
     }
 
