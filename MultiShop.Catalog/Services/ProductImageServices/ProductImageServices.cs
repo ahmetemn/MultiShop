@@ -7,7 +7,7 @@ using MultiShop.Catalog.Settings;
 
 namespace MultiShop.Catalog.Services.ProductImageServices
 {
-    public class ProductImageServices : GenericMongoService<ProductImage, CreateProductImageDto, UpdateProductImageDto, ResultProductImageDto, GetByIdProductImageDto>
+    public class ProductImageServices : GenericMongoService<ProductImage, CreateProductImageDto, UpdateProductImageDto, ResultProductImageDto, GetByIdProductImageDto > , IProductImageServices
     {
         public ProductImageServices(IMapper mapper, IDatabaseSettings databaseSettings, string collectionName) : base(mapper, databaseSettings, databaseSettings.ProductImageCollectionName)
         {
